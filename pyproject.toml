@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydeadwood"
+version = "1.0.0"
+description = "Find dead code in Python projects without running them: unused imports, functions, classes and methods, unreachable code, and constant dead branches."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = ["dead-code", "static-analysis", "unused-imports", "python", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+pydeadwood = "pydeadwood.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pydeadwood*"]
